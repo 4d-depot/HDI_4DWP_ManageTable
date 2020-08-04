@@ -1,0 +1,4 @@
+If (Form:C1466.trace)
+	TRACE:C157
+End if 
+WP TABLE DELETE ROWS:C1693(WPtable;3;2)

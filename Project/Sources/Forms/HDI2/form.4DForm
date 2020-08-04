@@ -1,0 +1,704 @@
+﻿{
+	"destination": "detailScreen",
+	"windowMinWidth": 1000,
+	"windowMinHeight": 600,
+	"width": 1000,
+	"height": 600,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onMenuSelect",
+		"onDataChange",
+		"onUnload",
+		"onAfterEdit",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "US Letter",
+		"paperWidth": "612pt",
+		"paperHeight": "792pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 960,
+					"height": 560,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "TabControl",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Info",
+						"New commands",
+						"Automatic actions",
+						"Improved commands"
+					],
+					"action": "GotoPage",
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Tab Control.4dm"
+				},
+				"btnTrace": {
+					"type": "checkbox",
+					"top": 541,
+					"left": 610,
+					"width": 183,
+					"height": 22,
+					"dataSource": "Form:C1466.trace",
+					"text": "Trace code",
+					"focusable": false,
+					"events": [
+						"onClick"
+					],
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"btnHtml": {
+					"type": "button",
+					"top": 541,
+					"left": 40,
+					"width": 180,
+					"height": 23,
+					"sizingY": "move",
+					"text": "Export to HTML",
+					"focusable": false,
+					"method": "ObjectMethods/btnHtml.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Picture45": {
+					"type": "picture",
+					"top": 84,
+					"left": 560,
+					"width": 400,
+					"height": 400,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/background.png"
+				},
+				"Button": {
+					"type": "button",
+					"top": 541,
+					"left": 867,
+					"width": 95,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"text": "Demo",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 80,
+					"left": 40,
+					"width": 560,
+					"height": 80,
+					"fontFamily": ".SF NS Text",
+					"fontSize": 24,
+					"text": "A new set of commands is now available to  manage rows and columns in tables:"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 160,
+					"left": 60,
+					"width": 480,
+					"height": 188,
+					"stroke": "#191970",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 24,
+					"text": "WP Table insert rows\rWP Table insert columns\r\rWP TABLE DELETE ROWS\rWP TABLE DELETE COLUMNS"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 330,
+					"left": 40,
+					"width": 560,
+					"height": 80,
+					"fontFamily": ".SF NS Text",
+					"fontSize": 24,
+					"text": "The following commands have been improved to retrieve information about the selected rows, columns, or cells in a table:"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 430,
+					"left": 60,
+					"width": 480,
+					"height": 118,
+					"stroke": "#191970",
+					"fontFamily": ".SF NS Text",
+					"fontSize": 24,
+					"text": "WP Table get rows\rWP Table get columns\rWP Table get cells\r"
+				}
+			}
+		},
+		{
+			"objects": {
+				"WParea1": {
+					"type": "write",
+					"top": 70,
+					"left": 40,
+					"width": 550,
+					"height": 450,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "WParea",
+					"hideFocusRing": true,
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"showHorizontalRuler": false,
+					"showVerticalRuler": false,
+					"layoutMode": "embedded",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onSelectionChange",
+						"onAfterEdit"
+					]
+				},
+				"Button6": {
+					"type": "button",
+					"top": 220,
+					"left": 610,
+					"width": 350,
+					"height": 23,
+					"sizingX": "move",
+					"text": "$column:=WP Table insert columns(WPtable;2;1) ",
+					"focusable": false,
+					"method": "ObjectMethods/Button6.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text5": {
+					"type": "text",
+					"top": 75,
+					"left": 610,
+					"width": 360,
+					"height": 17,
+					"sizingX": "move",
+					"text": "Insert two rows at the third position:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 105,
+					"left": 650,
+					"width": 300,
+					"height": 26,
+					"sizingX": "move",
+					"fontWeight": "bold",
+					"text": "WP Table insert rows"
+				},
+				"Button2": {
+					"type": "button",
+					"top": 130,
+					"left": 610,
+					"width": 350,
+					"height": 23,
+					"sizingX": "move",
+					"text": "$row:=WP Table insert rows(WPtable;3;2) ",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 165,
+					"left": 610,
+					"width": 360,
+					"height": 17,
+					"sizingX": "move",
+					"text": "Insert one column at the second position:"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 195,
+					"left": 650,
+					"width": 300,
+					"height": 26,
+					"sizingX": "move",
+					"fontWeight": "bold",
+					"text": "WP Table insert columns"
+				},
+				"Button3": {
+					"type": "button",
+					"top": 480,
+					"left": 610,
+					"width": 350,
+					"height": 23,
+					"sizingX": "move",
+					"text": "WP TABLE DELETE COLUMNS(WPtable;2;1) ",
+					"focusable": false,
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 335,
+					"left": 610,
+					"width": 360,
+					"height": 17,
+					"sizingX": "move",
+					"text": "Delete two rows at the third position:"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 365,
+					"left": 650,
+					"width": 300,
+					"height": 26,
+					"sizingX": "move",
+					"fontWeight": "bold",
+					"text": "WP TABLE DELETE ROWS"
+				},
+				"Button4": {
+					"type": "button",
+					"top": 390,
+					"left": 610,
+					"width": 350,
+					"height": 23,
+					"sizingX": "move",
+					"text": "WP TABLE DELETE ROWS(WPtable;3;2) ",
+					"focusable": false,
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text7": {
+					"type": "text",
+					"top": 425,
+					"left": 610,
+					"width": 360,
+					"height": 17,
+					"sizingX": "move",
+					"text": "Delete one column at the second position:"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 455,
+					"left": 650,
+					"width": 300,
+					"height": 26,
+					"sizingX": "move",
+					"fontWeight": "bold",
+					"text": "WP TABLE DELETE COLUMNS"
+				},
+				"Picture46": {
+					"type": "picture",
+					"top": 95,
+					"left": 920,
+					"width": 32,
+					"height": 32,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/new.png"
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 185,
+					"left": 920,
+					"width": 32,
+					"height": 32,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/new.png"
+				},
+				"Picture2": {
+					"type": "picture",
+					"top": 355,
+					"left": 920,
+					"width": 32,
+					"height": 32,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/new.png"
+				},
+				"Picture3": {
+					"type": "picture",
+					"top": 445,
+					"left": 920,
+					"width": 32,
+					"height": 32,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/new.png"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 290,
+					"left": 660,
+					"width": 240,
+					"height": 0,
+					"startPoint": "topLeft"
+				}
+			}
+		},
+		{
+			"objects": {
+				"WParea3": {
+					"type": "write",
+					"top": 70,
+					"left": 40,
+					"width": 550,
+					"height": 450,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "WParea",
+					"hideFocusRing": true,
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"showHorizontalRuler": false,
+					"showVerticalRuler": false,
+					"layoutMode": "embedded",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onSelectionChange",
+						"onAfterEdit"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"text": "insertRowAbove",
+					"top": 130,
+					"left": 618,
+					"width": 325,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"action": "insertRowAbove",
+					"focusable": false,
+					"sizingX": "move"
+				},
+				"Button5": {
+					"type": "button",
+					"text": "insertRowBelow",
+					"top": 165,
+					"left": 618,
+					"width": 325,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"action": "insertRowBelow",
+					"focusable": false,
+					"sizingX": "move"
+				},
+				"Button10": {
+					"type": "button",
+					"text": "insertColumnToTheLeft",
+					"top": 220,
+					"left": 618,
+					"width": 325,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"action": "insertColumnToTheLeft",
+					"focusable": false,
+					"sizingX": "move"
+				},
+				"Button11": {
+					"type": "button",
+					"text": "insertColumnToTheRight",
+					"top": 255,
+					"left": 618,
+					"width": 325,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"action": "insertColumnToTheRight",
+					"focusable": false,
+					"sizingX": "move"
+				},
+				"Button12": {
+					"type": "button",
+					"text": "deleteRows",
+					"top": 310,
+					"left": 618,
+					"width": 325,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"action": "deleteRows",
+					"focusable": false,
+					"sizingX": "move"
+				},
+				"Button13": {
+					"type": "button",
+					"text": "deleteColumns",
+					"top": 345,
+					"left": 618,
+					"width": 325,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"action": "deleteColumns",
+					"focusable": false,
+					"sizingX": "move"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 75,
+					"left": 610,
+					"width": 360,
+					"height": 47,
+					"sizingX": "move",
+					"text": "The buttons below are based on automatic actions.\rNo code needed !"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 405,
+					"left": 610,
+					"width": 360,
+					"height": 47,
+					"sizingX": "move",
+					"text": "N.B. All these automatic actions are also available in the contextual menu."
+				}
+			}
+		},
+		{
+			"objects": {
+				"Matrix": {
+					"type": "picture",
+					"top": 271,
+					"left": 610,
+					"width": 350,
+					"height": 90,
+					"pictureFormat": "scaled",
+					"picture": "Images/Matrix.svg"
+				},
+				"WParea2": {
+					"type": "write",
+					"top": 70,
+					"left": 40,
+					"width": 550,
+					"height": 450,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "WParea",
+					"hideFocusRing": true,
+					"scrollbarVertical": "automatic",
+					"scrollbarHorizontal": "automatic",
+					"showHorizontalRuler": false,
+					"showVerticalRuler": false,
+					"layoutMode": "embedded",
+					"events": [
+						"onLoad",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onSelectionChange",
+						"onAfterEdit"
+					]
+				},
+				"Button7": {
+					"type": "button",
+					"top": 130,
+					"left": 610,
+					"width": 350,
+					"height": 23,
+					"sizingX": "move",
+					"text": "WP Table get rows",
+					"focusable": false,
+					"method": "ObjectMethods/Button7.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text14": {
+					"type": "text",
+					"top": 75,
+					"left": 610,
+					"width": 360,
+					"height": 47,
+					"sizingX": "move",
+					"text": "Select rows, columns, or cells. Then get information about the selection."
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 309,
+					"left": 735,
+					"width": 100,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.info.firstRow",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 309,
+					"left": 850,
+					"width": 100,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.info.rowCount",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable3": {
+					"type": "input",
+					"top": 339,
+					"left": 735,
+					"width": 100,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.info.firstColumn",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Variable4": {
+					"type": "input",
+					"top": 339,
+					"left": 850,
+					"width": 100,
+					"height": 17,
+					"sizingX": "move",
+					"dataSource": "Form:C1466.info.columnCount",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button8": {
+					"type": "button",
+					"top": 165,
+					"left": 610,
+					"width": 350,
+					"height": 23,
+					"sizingX": "move",
+					"text": "WP Table get columns",
+					"focusable": false,
+					"method": "ObjectMethods/Button8.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button9": {
+					"type": "button",
+					"top": 200,
+					"left": 610,
+					"width": 350,
+					"height": 23,
+					"sizingX": "move",
+					"text": "WP Table get cells",
+					"focusable": false,
+					"method": "ObjectMethods/Button9.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text16": {
+					"type": "text",
+					"top": 309,
+					"left": 620,
+					"width": 100,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Rows:"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 339,
+					"left": 620,
+					"width": 100,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Columns:"
+				},
+				"Text18": {
+					"type": "text",
+					"top": 279,
+					"left": 735,
+					"width": 100,
+					"height": 17,
+					"textAlign": "center",
+					"text": "First"
+				},
+				"Text19": {
+					"type": "text",
+					"top": 279,
+					"left": 850,
+					"width": 100,
+					"height": 17,
+					"textAlign": "center",
+					"text": "Count"
+				},
+				"Picture4": {
+					"type": "picture",
+					"top": 95,
+					"left": 920,
+					"width": 32,
+					"height": 32,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/Updated.png"
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	}
+}
